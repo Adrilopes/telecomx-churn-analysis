@@ -45,6 +45,7 @@ Visualizations and statistical comparisons were used to identify meaningful busi
 
 ---
 
+
 ## 🔍 Key Findings
 
 - **Month-to-month contracts** show significantly higher churn rates.
@@ -53,25 +54,6 @@ Visualizations and statistical comparisons were used to identify meaningful busi
 - Absence of **online security and tech support** increases churn risk.
 - Higher **monthly charges** correlate with greater churn tendency.
 - A churn sensitivity pattern appears around the **$70 monthly charge range**.
-
----
-
-## 💡 Strategic Recommendations
-
-### 🔹 Contract Strategy
-Encourage migration from month-to-month to long-term contracts through incentives and loyalty benefits.
-
-### 🔹 Payment Optimization
-Promote automatic payment methods (credit card or bank transfer) to reduce friction and increase retention.
-
-### 🔹 Onboarding Strategy
-Strengthen the first 90-day customer journey to reduce early churn risk.
-
-### 🔹 Service Bundling
-Position online security and technical support as built-in value rather than optional add-ons.
-
-### 🔹 Pricing Positioning
-Ensure higher-priced plans clearly communicate added value to justify pricing.
 
 ---
 
@@ -94,23 +76,42 @@ telecomx-churn-analysis/
 
 ## ▶️ How to Run the Project
 
-### Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/Adrilopes/telecomx-churn-analysis.git
 cd telecomx-churn-analysis
 ```
 
-### 2️⃣ Run the ETL pipeline
+### 2️⃣ Create and activate a virtual environment (recommended)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Mac/Linux
+```
+
+On Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the ETL pipeline
+
+```bash
 python src/load.py
-
-### 3️⃣ Open the notebook for analysis
-jupyter notebook notebooks/eda.ipynb
-
+```
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Tools & Technologies
 
+**Core**
 - Python
 - Pandas
 - NumPy
@@ -118,14 +119,9 @@ jupyter notebook notebooks/eda.ipynb
 - Seaborn
 - Jupyter Notebook
 
----
-
-## 📈 Future Improvements
-
-- Churn prediction model (classification)
-- Feature importance analysis
-- Model performance metrics (ROC-AUC, Precision, Recall)
-- Pipeline automation and deployment readiness
+**Tooling**
+- VS Code
+- Git & GitHub
 
 ---
 
