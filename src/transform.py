@@ -25,6 +25,13 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
         df["charges_total"] = pd.to_numeric(df["charges_total"], errors="coerce")
         df = df.dropna(subset=["charges_total"])
 
+
+     # Padronizar categorias especiais antes do mapeamento binário
+    df = df.replace({
+        "No internet service": "No",
+        "No phone service": "No"
+    })
+
     # Convert binary Yes/No columns to 1/0
     mapa_binario = {"Yes": 1, "No": 0}
 
